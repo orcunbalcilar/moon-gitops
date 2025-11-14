@@ -4,4 +4,4 @@ ingress:
 
 replicaCount: 2
 
-license: ""
+licenseSecretName: moon-license
