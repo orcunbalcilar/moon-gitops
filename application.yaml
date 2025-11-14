@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: moon
+  name: moon-dev
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -22,7 +22,7 @@ spec:
   
   destination:
     server: https://kubernetes.default.svc
-    namespace: moon
+    namespace: moon-dev
   
   syncPolicy:
     automated:
