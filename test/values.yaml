@@ -1,0 +1,7 @@
+ingress:
+  host: moon-test.apps-crc.testing
+  enabled: true
+
+replicaCount: 2
+
+licenseSecretName: moon-license

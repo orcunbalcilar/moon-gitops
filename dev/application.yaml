@@ -14,7 +14,7 @@ spec:
       targetRevision: 2.7.9
       helm:
         valueFiles:
-          - $values/values.yaml
+          - $values/dev/values.yaml
     
     - repoURL: https://github.com/orcunbalcilar/moon-gitops.git
       targetRevision: HEAD
