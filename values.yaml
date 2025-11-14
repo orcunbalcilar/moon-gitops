@@ -1,0 +1,7 @@
+ingress:
+  host: moon.apps-crc.testing
+  enabled: true
+
+replicaCount: 2
+
+license: ""
