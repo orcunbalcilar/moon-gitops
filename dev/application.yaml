@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hey-deployment-moon-dev
+  name: moon-dev
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -38,4 +38,4 @@ spec:
       backoff:
         duration: 5s
         factor: 2
-        maxDuration: 5m
+        maxDuration: 3m
