@@ -5,16 +5,16 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://github.com/orcunbalcilar/moon-gitops
-    targetRevision: master
-    path: uat
-    helm:
-      valueFiles:
-        - values.yaml
+  sources:
+    - repoURL: https://charts.aerokube.com/
       chart: moon2
-      repoURL: https://charts.aerokube.com/
-      version: 2.7.9
+      targetRevision: 2.7.9
+      helm:
+        valueFiles:
+          - $values/uat/values.yaml
+    - repoURL: https://github.com/orcunbalcilar/moon-gitops
+      targetRevision: master
+      ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: moon-uat
