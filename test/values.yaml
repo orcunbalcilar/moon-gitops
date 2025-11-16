@@ -5,7 +5,7 @@ customIngress:
   enabled: false
   annotations: {}
   ingressClassName: openshift-default
-  host: moon-uat.apps-crc.testing
+  host: moon-test.apps-crc.testing
   tls: []
   #- secretName: moon-tls
   #  hosts:
@@ -41,7 +41,7 @@ ingress:
   ##
   ## Ingress host. Replace this with your domain name.
   ##
-  host: moon-uat.apps-crc.testing
+  host: moon-test.apps-crc.testing
 
   ##
   ## Ingress class name
@@ -569,7 +569,7 @@ quota:
   ## to null when having multiple quota objects.
   ##
   moon:
-    namespace: moon-uat
+    namespace: moon-test
 
 ##
 ## License key. When empty default free license key is automatically used.

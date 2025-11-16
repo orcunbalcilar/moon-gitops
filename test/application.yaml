@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: moon2-uat
+  name: moon2-test
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -13,13 +13,13 @@ spec:
       targetRevision: 2.7.9
       helm:
         valueFiles:
-          - $values/uat/values.yaml
+          - $values/test/values.yaml
     - repoURL: https://github.com/orcunbalcilar/moon-gitops
       targetRevision: master
       ref: values
   destination:
     server: https://kubernetes.default.svc
-    namespace: moon-uat
+    namespace: moon-test
   syncPolicy:
     automated:
       prune: true
