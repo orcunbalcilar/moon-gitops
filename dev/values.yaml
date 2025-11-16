@@ -2,8 +2,9 @@
 ## Custom Ingress settings. Overrides default Nginx Ingress configuration.
 ##
 customIngress:
-  enabled: false
-  annotations: {}
+  enabled: true
+  annotations:
+    route.openshift.io/termination: edge
   ingressClassName: openshift-default
   host: moon.aerokube.local
   tls: []
@@ -46,7 +47,7 @@ ingress:
   ##
   ## Ingress class name
   ##
-  ingressClassName: openshift-default
+  ingressClassName:
 
   ##
   ## Files with TLS certificate and TLS key. When provided Ingress switches to HTTPS-only mode.
