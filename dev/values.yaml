@@ -43,7 +43,7 @@ deployment:
 configs:
   default:
     serviceAccountName: default
-    sessionTimeout: 30m
+    sessionTimeout: 25m
     user:
       id: 4096
       name: user
