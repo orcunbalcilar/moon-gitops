@@ -1,26 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: moon2-test
+  name: moon-root
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/orcunbalcilar/moon-gitops
     targetRevision: master
-    path: test
-    helm:
-      valueFiles:
-        - values.yaml
-      chart: moon2
-      repoURL: https://charts.aerokube.com/
-      version: 2.7.9
+    path: .
   destination:
     server: https://kubernetes.default.svc
-    namespace: moon-test
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true

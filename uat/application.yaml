@@ -1,41 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: moon-uat
+  name: moon2-uat
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-  
-  sources:
-    - repoURL: https://charts.aerokube.com
+  source:
+    repoURL: https://github.com/orcunbalcilar/moon-gitops
+    targetRevision: master
+    path: uat
+    helm:
+      valueFiles:
+        - values.yaml
       chart: moon2
-      targetRevision: 2.7.9
-      helm:
-        valueFiles:
-          - $values/uat/values.yaml
-    
-    - repoURL: https://github.com/orcunbalcilar/moon-gitops.git
-      targetRevision: HEAD
-      ref: values
-  
+      repoURL: https://charts.aerokube.com/
+      version: 2.7.9
   destination:
     server: https://kubernetes.default.svc
     namespace: moon-uat
-  
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-      allowEmpty: false
     syncOptions:
       - CreateNamespace=true
-      - PrunePropagationPolicy=foreground
-      - PruneLast=true
-    retry:
-      limit: 5
-      backoff:
-        duration: 5s
-        factor: 2
-        maxDuration: 3m
