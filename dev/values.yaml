@@ -6,7 +6,7 @@ customIngress:
   annotations:
     route.openshift.io/termination: edge
   ingressClassName: openshift-default
-  host: moon.aerokube.local
+  host:
   tls: []
   #- secretName: moon-tls
   #  hosts:
@@ -42,7 +42,7 @@ ingress:
   ##
   ## Ingress host. Replace this with your domain name.
   ##
-  host: moon.aerokube.local
+  host:
 
   ##
   ## Ingress class name
