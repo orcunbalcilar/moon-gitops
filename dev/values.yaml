@@ -4,7 +4,7 @@
 customIngress:
   enabled: false
   annotations: {}
-  ingressClassName: nginx
+  ingressClassName: openshift-default
   host: moon.aerokube.local
   tls: []
   #- secretName: moon-tls
@@ -46,7 +46,7 @@ ingress:
   ##
   ## Ingress class name
   ##
-  ingressClassName: nginx
+  ingressClassName: openshift-default
 
   ##
   ## Files with TLS certificate and TLS key. When provided Ingress switches to HTTPS-only mode.
