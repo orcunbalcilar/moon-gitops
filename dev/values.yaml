@@ -146,7 +146,7 @@ deployment:
   ##
   ## Total number of Moon pods. Default is 2.
   ##
-  replicas: 4
+  replicas: 1
 
   ##
   ## Moon pods graceful shutdown timeout. Default is 360 seconds.
