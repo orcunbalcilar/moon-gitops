@@ -6,7 +6,7 @@ customIngress:
   annotations:
     route.openshift.io/termination: edge
   ingressClassName: openshift-default
-  host:
+  host: moon-dev.apps-crc.testing
   tls: []
   #- secretName: moon-tls
   #  hosts:
@@ -42,7 +42,7 @@ ingress:
   ##
   ## Ingress host. Replace this with your domain name.
   ##
-  host:
+  host: moon-dev.apps-crc.testing
 
   ##
   ## Ingress class name
