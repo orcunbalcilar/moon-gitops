@@ -529,23 +529,32 @@ browsers:
     cypress:
       electron:
         repository: quay.io/browsers/cypress-electron
+        default: latest
       chromium:
         repository: quay.io/browsers/cypress-chromium
+        default: latest
       chrome:
         repository: quay.io/browsers/cypress-chrome
+        default: latest
       firefox:
         repository: quay.io/browsers/cypress-firefox
+        default: latest
       edge:
         repository: quay.io/browsers/cypress-edge
+        default: latest
     playwright:
       chrome:
         repository: quay.io/browser/playwright-chrome
+        default: v1.51.0
       chromium:
         repository: quay.io/browser/playwright-chromium
+        default: v1.51.0
       firefox:
         repository: quay.io/browser/playwright-firefox
+        default: v1.51.0
       webkit:
         repository: quay.io/browser/playwright-webkit
+        default: v1.51.0
     devtools:
       chrome:
         repository: quay.io/browser/devtools-google-chrome-stable
