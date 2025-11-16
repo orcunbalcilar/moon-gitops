@@ -24,9 +24,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  ignoreDifferences:
-    - group: security.openshift.io
-      kind: SecurityContextConstraints
-      name: moon
-      jsonPointers:
-        - /seccompProfiles
