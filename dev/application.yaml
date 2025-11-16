@@ -8,7 +8,7 @@ spec:
   sources:
     - repoURL: https://charts.aerokube.com/
       chart: moon2
-      targetRevision: 2.7.8
+      targetRevision: 2.7.9
       helm:
         valueFiles:
           - $values/dev/values.yaml
