@@ -24,17 +24,15 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
     retry:
       limit: 5
       backoff:
         duration: 5s
         factor: 2
         maxDuration: 3m
-  ignoreDifferences:
-    - group: security.openshift.io
-      kind: SecurityContextConstraints
-      name: moon
-      jsonPointers:
-        - /seccompProfiles
+  #ignoreDifferences:
+   # - group: security.openshift.io
+    #  kind: SecurityContextConstraints
+     # name: moon
+      #jsonPointers:
+       # - /seccompProfiles
