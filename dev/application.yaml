@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: moon
-  namespace: argocd
+  namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -30,9 +30,9 @@ spec:
         duration: 5s
         factor: 2
         maxDuration: 3m
-  #ignoreDifferences:
-   # - group: security.openshift.io
-    #  kind: SecurityContextConstraints
-     # name: moon
-      #jsonPointers:
-       # - /seccompProfiles
+  ignoreDifferences:
+    - group: security.openshift.io
+      kind: SecurityContextConstraints
+      name: moon
+      jsonPointers:
+        - /users
